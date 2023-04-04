@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="using:AwesomeChat.ViewModels"
+        xmlns:main="clr-namespace:AwesomeChat.Views"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AwesomeChat.Views.Windows.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+        xmlns:app="clr-namespace:AwesomeChat"
+        Title="AwesomeChat">
+    <StackPanel>
+        <Panel>
+            <Menu>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="_About" Click="MenuItem_OnClick"/>
+                </MenuItem>
+            </Menu> 
+        </Panel>
+        <Design.DataContext>
+            <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+            <vm:MainWindowViewModel />
+        </Design.DataContext>
+        <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
+            <rxui:RoutedViewHost.DefaultContent >
+                <main:AuthScreen/>
+            </rxui:RoutedViewHost.DefaultContent>
+            <rxui:RoutedViewHost.ViewLocator>
+                <app:AppViewLocator />
+            </rxui:RoutedViewHost.ViewLocator>
+        </rxui:RoutedViewHost>
+    </StackPanel>
+</Window>

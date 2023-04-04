@@ -4,7 +4,17 @@
     <option name="projectPerEditor">
       <map>
         <entry key="AwesomeChat/App.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/AboutWindow.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/AuthScreen.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/AuthWindow.axaml" value="AwesomeChat/AwesomeChat.csproj" />
         <entry key="AwesomeChat/Views/MainWindow.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/Pages/AuthPage.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/Pages/MessagesPage.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/Pages/UsersPage.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/SignIn.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/SignInForm.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/Windows/AboutWindow.axaml" value="AwesomeChat/AwesomeChat.csproj" />
+        <entry key="AwesomeChat/Views/Windows/MainWindow.axaml" value="AwesomeChat/AwesomeChat.csproj" />
       </map>
     </option>
   </component>

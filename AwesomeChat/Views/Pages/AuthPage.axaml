@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             xmlns:vm="using:AwesomeChat.ViewModels"
+             x:DataType="vm:AuthWindowViewModel"
+             x:Class="AwesomeChat.Views.AuthScreen">
+    
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+    
+    <StackPanel>
+        <StackPanel Margin="10" Spacing="10" MaxWidth="500">
+            <TextBlock
+                Text="{Binding Greeting}"
+                FontSize="22" HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="blue"
+                Margin="0 15 0 60"
+                FontWeight="700" />
+            <TextBlock
+                Text="{Binding GreetingSubtitle}"
+                FontSize="14" HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="blue"
+                FontWeight="700" />
+            <TextBox Text="{Binding Email}" CornerRadius="10" Watermark="Email" />
+            <TextBox Text="{Binding Password}" CornerRadius="10" Watermark="Password" />
+            <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Command="{Binding OnSkipClicked}" CornerRadius="10" Content="Skip" Padding="20 10" Margin="0 0 10 0"/>
+                <Button Command="{Binding OnSignUpClicked}" CornerRadius="10" FontWeight="700" Padding="20 10" Foreground="white" Background="blue"
+                        HorizontalAlignment="Right" Content="{Binding SignUp}" />
+            </WrapPanel>
+            
+        </StackPanel>
+    </StackPanel>
+</UserControl>

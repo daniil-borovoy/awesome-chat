@@ -4,4 +4,5 @@ namespace AwesomeChat.ViewModels;
 
 public class ViewModelBase : ReactiveObject
 {
+    
 }

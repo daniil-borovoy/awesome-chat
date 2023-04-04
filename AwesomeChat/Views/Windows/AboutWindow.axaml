@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        MaxHeight="300"
+        MaxWidth="400"
+        Icon="/Assets/avalonia-logo.ico"
+        x:Class="AwesomeChat.Views.Windows.AboutWindow"
+        Title="О приложении">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Width="100" Source="/Assets/avalonia-logo.ico" Margin="30"/>
+                <TextBlock FontSize="20" Margin="0 0 0 10" TextAlignment="Center">
+                        Приложение чат
+                </TextBlock>
+                <TextBlock TextAlignment="Center">
+                        Выполнил Боровой Даниил ВИАС31
+                </TextBlock>
+        </StackPanel>
+</Window>

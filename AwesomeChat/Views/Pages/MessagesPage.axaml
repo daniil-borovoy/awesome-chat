@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:AwesomeChat.ViewModels"
+             x:DataType="vm:MessagesPageViewModel"
+             x:Class="AwesomeChat.Views.Pages.MessagesPage">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MessagesPageViewModel />
+    </Design.DataContext>
+    <DockPanel>
+
+        <ScrollViewer DockPanel.Dock="Top">
+            <ListBox Height="450" x:Name="ChatListBox"
+                     Items="{Binding Database.MessagesTable}"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     Margin="10"
+                     MinHeight="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Content}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal"
+                    Margin="10">
+            <TextBox x:Name="MessageTextBox"
+                     Name="MessageInput"
+                     Watermark="Write your message"
+                     KeyDown="MessageInput_OnKeyDown"
+                     HorizontalAlignment="Center"
+                     Text="{Binding MessageContent}"
+                     MinWidth="500"
+                     Margin="0 0 10 0" />
+            <Button Content="Send"
+                    Command="{Binding SendMessage}" />
+        </StackPanel>
+    </DockPanel>
+</UserControl>
